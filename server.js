@@ -16,7 +16,8 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0-6xejz.mongodb.net/test?retryWrites=true&w=majority`, { useNewUrlParser: true });
+//mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0-6xejz.mongodb.net/test?retryWrites=true&w=majority`, { useNewUrlParser: true });
+mongoose.connect(`mongodb+srv://admin:NACI870129mon@cluster0-6xejz.mongodb.net/test?retryWrites=true&w=majority`, { useNewUrlParser: true });
 const connection = mongoose.connection; connection.once('open', function () {
     console.log("MongoDB database connection established successfully");
 })
